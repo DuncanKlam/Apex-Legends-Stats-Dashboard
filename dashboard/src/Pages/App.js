@@ -194,12 +194,12 @@ function App() {
           <Flex flex={1} align='center' justify='center' _hover={{ bg: 'red.500', color: 'white' }} borderRadius='15px' onClick={onInformationOpen}>
             <InformationModal isOpen={isInformationOpen} onClose={onInformationClose} colorScheme={colorScheme}/>
           </Flex>
-          <Flex flex={1} align='center' justify='center' _hover={{ bg: 'gray.500', color: 'white' }} borderRadius='15px' onClick={onSearchOpen}>
+          <Flex flex={1} align='center' justify='center' _hover={{ bg: `${colorScheme + '.200'}`, color: 'white' }} borderRadius='15px' onClick={onSearchOpen}>
             <PlayerSearchInfoForm isOpen={isSearchOpen} onClose={onSearchClose} onFormSubmit={handleSearchSubmit} colorScheme={colorScheme} loading={loading}/>
           </Flex>
         </Flex>        
       </Flex>
-      <Flex height='78.5vh'>
+      <Flex height='78.4vh'>
         <Flex flex={1}>
           <LegendList data={allLegendData} isLoading={loading} onClick={handleLegendListClick} colorScheme={colorScheme}/>
         </Flex>

@@ -133,11 +133,13 @@ const LegendDisplay = ({ data, isLoading, colorScheme }) => {
             <Skeleton isLoaded={!isLoading}>
               <Heading as='h3' size='3xl'  borderRadius='10px' padding='5px 8px' color='white'>{data[0]}</Heading>
             </Skeleton>
+            <Heading as='h6' size='md'  borderRadius='10px' padding='5px 8px' color='white'>{'Average Rank Percentile'}</Heading>
             <CircularProgress  value={avgLegendRank} color={colorScheme+'.800'} size='100px' thickness='15px' capIsRound isIndeterminate={isLoading}>
               <CircularProgressLabel fontSize='large' color={'white'}>
                 {!isLoading && avgLegendRank + '%'}
               </CircularProgressLabel>
             </CircularProgress>
+            <Heading as='h6' size='md'  borderRadius='10px' padding='5px 8px' color='white'>{'Average Rank Percentile (Platform)'}</Heading>
             <CircularProgress  value={avgLegendPlatformRank} color={colorScheme+'.800'} size='100px' thickness='15px' capIsRound isIndeterminate={isLoading}>
               <CircularProgressLabel fontSize='large' color={'white'}>
                 {!isLoading &&  avgLegendPlatformRank + '%'}
